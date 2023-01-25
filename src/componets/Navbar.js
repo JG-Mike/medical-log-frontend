@@ -3,6 +3,6 @@ import '../css/Navbar.css'
 
 export default function Navbar() {
   return (
-    <div className='navbar'>Navbar</div>
+    <div className='navbar'>hello navbar</div>
   )
 }
