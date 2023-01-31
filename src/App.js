@@ -1,4 +1,10 @@
-import Navbar from "./componets/Navbar";
+// import Navbar from "./componets/Navbar";
+import '../src/css/Index.css'
+import Students from "./componets/Students";
+import Staff from "./componets/Staff";
+import Login from "./componets/Login";
+import { BrowserRouter as Router,Route} from "react-router-dom";
+
 
 
 
@@ -6,7 +12,11 @@ import Navbar from "./componets/Navbar";
 function App() {
   return (
     <div className="App">
-< Navbar/>
+{/* < Navbar/> */}
+<Router>
+  <Route componet ={Students} path='/students'exact/>
+</Router>
+
     </div>
   );
 }
