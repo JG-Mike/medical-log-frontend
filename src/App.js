@@ -1,5 +1,4 @@
-// import Navbar from "./componets/Navbar";
-import '../src/css/Index.css'
+import "./componets/css/Index.css"
 import Students from "./componets/Students";
 import Staff from "./componets/Staff";
 import Login from "./componets/Login";
@@ -16,19 +15,20 @@ import {
 function App() {
   return (
     <Router>
-    <div className="App">
-      <div>
+    <nav className="nav">
+      <div className="navbarRoutes">
       <ul>
         <li>
-          <Link to={'/'}>Logins2</Link>
+          <Link className="routeLink"  to={'/'}>Login</Link>
         </li>
         <li>
-          <Link to={'/students'}>Students</Link>
+          <Link className="routeLink"  to={'/students'}>Students</Link>
         </li>
           <li>
-          <Link to={'/staff'}>Staff</Link>
+          <Link className="routeLink"  to={'/staff'}>Staff</Link>
         </li>
       </ul>
+      
 
            <Routes>
                  <Route exact path='/' element={< Login />}></Route>
@@ -36,7 +36,7 @@ function App() {
                  <Route  path='/staff' element={< Staff />}></Route>
           </Routes>
     </div>
-    </div>
+    </nav>
     </Router>
   );
 }
