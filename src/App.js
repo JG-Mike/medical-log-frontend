@@ -2,6 +2,7 @@ import "./componets/css/Index.css"
 import Students from "./componets/Students";
 import Staff from "./componets/Staff";
 import Login from "./componets/Login";
+import Home from "./Home";
 import {
     BrowserRouter as Router,
     Routes,
@@ -27,6 +28,9 @@ function App() {
           <li>
           <Link className="routeLink"  to={'/staff'}>Staff</Link>
         </li>
+           <li>
+          <Link className="routeLink"  to={'/home'}>Home</Link>
+        </li>
       </ul>
       
 
@@ -34,6 +38,7 @@ function App() {
                  <Route exact path='/' element={< Login />}></Route>
                  <Route  path='/students' element={< Students />}></Route>
                  <Route  path='/staff' element={< Staff />}></Route>
+                 <Route  path='/home' element={<Home/>}></Route>
           </Routes>
     </div>
     </nav>
