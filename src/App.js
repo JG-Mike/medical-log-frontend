@@ -2,7 +2,7 @@ import "./componets/css/Index.css"
 import Students from "./componets/Students";
 import Staff from "./componets/Staff";
 import Login from "./componets/Login";
-import Home from "./Home";
+import Home from "./componets/Home";
 import {
     BrowserRouter as Router,
     Routes,
@@ -20,7 +20,10 @@ function App() {
       <div className="navbarRoutes">
       <ul>
         <li>
-          <Link className="routeLink"  to={'/'}>Login</Link>
+         <Link className="routeLink"  to={'/home'}>Home</Link>
+        </li>
+         <li>
+           <Link className="routeLink"  to={'/login'}>Login</Link>
         </li>
         <li>
           <Link className="routeLink"  to={'/students'}>Students</Link>
@@ -28,17 +31,14 @@ function App() {
           <li>
           <Link className="routeLink"  to={'/staff'}>Staff</Link>
         </li>
-           <li>
-          <Link className="routeLink"  to={'/home'}>Home</Link>
-        </li>
       </ul>
       
 
            <Routes>
-                 <Route exact path='/' element={< Login />}></Route>
+                  <Route exact path='/home' element={<Home/>}></Route>
+                 <Route  path='/login' element={< Login />}></Route>
                  <Route  path='/students' element={< Students />}></Route>
                  <Route  path='/staff' element={< Staff />}></Route>
-                 <Route  path='/home' element={<Home/>}></Route>
           </Routes>
     </div>
     </nav>
