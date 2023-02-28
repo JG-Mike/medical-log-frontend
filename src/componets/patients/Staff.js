@@ -1,4 +1,5 @@
 import React from 'react'
+import './Patients.css'
 
 export default function Staff() {
   return (
