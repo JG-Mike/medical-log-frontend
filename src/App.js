@@ -16,7 +16,7 @@ import {
 function App() {
   return (
     <Router>
-    <nav className="nav">
+    <nav className="navbar">
       <div className="navbarRoutes">
       <ul>
         <li>

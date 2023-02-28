@@ -3,7 +3,13 @@ import './css/Home.css'
 
 function Home() {
   return (
-    <div>Home</div>
+    <div className="wrapper">
+      <h1>home</h1>
+      <img src="images/image1.jpg" alt="" />
+      <div className="text-box">
+
+      </div>
+    </div>
   )
 }
 
