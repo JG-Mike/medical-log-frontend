@@ -30,16 +30,15 @@ function Navbar() {
           <Link className="routeLink"  to={'/staff'}>Staff</Link>
         </li>
       </ul>
-      
-
+      </div>
+    </nav>
            <Routes>
                   <Route exact path='/home' element={<Home/>}></Route>
                  <Route  path='/login' element={< Login />}></Route>
                  <Route  path='/students' element={< Students />}></Route>
                  <Route  path='/staff' element={< Staff />}></Route>
           </Routes>
-    </div>
-    </nav>
+    
     </Router>
     )
 }
