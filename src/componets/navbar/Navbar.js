@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Home from '../home/Home';
 import Login from '../login/Login';
 import Staff from '../patients/Staff';
@@ -11,13 +11,22 @@ import {
     Link
 } from 'react-router-dom';
 
-function Navbar() {
+class Navbar extends Component{
+
+    state = {clicked: false};
+    handleClick = () => {
+     this.setState({clicked:!this.state.clicked})
+    }
+    render() {
   return (
     <Router>
     <nav >
-      <div className="navbarRoutes">
-      <ul>
-        <li>
+      <a href="/">
+      <img src="images/logoipsum-280.svg" alt="" /></a>
+      <div>
+      <ul
+      id='navbar' className={this.state.clicked ? '#navbar active' :'#navbar'}
+       > <li>
          <Link className="routeLink"  to={'/home'}>Home</Link>
         </li>
          <li>
@@ -31,6 +40,11 @@ function Navbar() {
         </li>
       </ul>
       </div>
+      <div className="mobile" onClick={this.handleClick}>
+        <i id='bar'
+        className={this.state.clicked? "fas fa-times" : "fas fa-bars"}
+        ></i>
+      </div>
     </nav>
            <Routes>
                   <Route exact path='/home' element={<Home/>}></Route>
@@ -42,5 +56,6 @@ function Navbar() {
     </Router>
     )
 }
+}
 
-export default Navbar
+export default Navbar;
