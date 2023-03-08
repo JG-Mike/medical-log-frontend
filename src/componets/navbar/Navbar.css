@@ -5,6 +5,7 @@
     padding: 0;
 }
 
+
 nav {
     display: flex;
     align-items: center;
@@ -13,7 +14,6 @@ nav {
     color: white;
     box-shadow: 0 5px 15px rgb(1, 1, 60);
     padding: 20px 80px;
-    /* border-radius: 50px; */
     font-weight: 600;
     font-size: 1.3rem ;
 }
@@ -68,7 +68,6 @@ nav {
             width: 200px;
             height: 100vh;
             background: black;
-            /* box-shadow: 0 40px 60px rgb(1, 1, 60); */
             padding: 40px 0 0 10px;
             transition: 0.3s ease-in-out;
             }
